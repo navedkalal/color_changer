@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            transition: 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .box{
+            width: 500px;
+            height: 150px;
+            border: 2px solid black;
+            padding: 25px;
+            text-align: center;
+        }
+        .btn{
+            width: 450px;
+            display: block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3 class="head">ffff</h3>
+            <button class="btn">Click ME</button>
+        </div>
+    </div>
+</body>
+<script>
+    function getRandomColor(){
+        let val1 = Math.ceil(0+Math.random()*255);
+        let val2 = Math.ceil(0+Math.random()*255);
+        let val3 = Math.ceil(0+Math.random()*255);
+       
+        return `rgb(${val1},${val2},${val3})`
+        
+    }
+    document.querySelector(".btn").addEventListener("click",()=>{
+        document.querySelector(".container").style.backgroundColor = getRandomColor();
+        document.querySelector(".head").innerText = getRandomColor();
+    })
+
+    
+</script>
+</html>
